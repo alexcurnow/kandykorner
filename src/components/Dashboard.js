@@ -7,6 +7,7 @@ import { ProductTypeProvider } from './products/ProductTypeProvider'
 import { EmployeeProvider } from './employees/EmployeeProvider'
 import EmployeeList from './employees/EmployeeList'
 import './KandyKorner.css'
+import { CustomerProductProvider } from './customers/CustomerProductProvider'
 
 export default () => (
   <>
@@ -20,19 +21,21 @@ export default () => (
       </span>
     </h2>
 
-    <EmployeeProvider>
-      <LocationProvider>
-        <ProductProvider>
+    <ProductProvider>
+      <EmployeeProvider>
+        <LocationProvider>
           <ProductTypeProvider>
-            <h2>Locations</h2>
-            <LocationList />
-            <h2>Products</h2>
-            <ProductList />
-            <h2>Employees</h2>
-            <EmployeeList />
+            <CustomerProductProvider>
+              <h2>Locations</h2>
+              <LocationList />
+              <h2>Products</h2>
+              <ProductList />
+              <h2>Employees</h2>
+              <EmployeeList />
+            </CustomerProductProvider>
           </ProductTypeProvider>
-        </ProductProvider>
-      </LocationProvider>
-    </EmployeeProvider>
+        </LocationProvider>
+      </EmployeeProvider>
+    </ProductProvider>
   </>
 )
