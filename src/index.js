@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import * as serviceWorker from './serviceWorker'
 import KandyKorner from './components/KandyKorner'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 ReactDOM.render(<KandyKorner />, document.getElementById('root'))
 
