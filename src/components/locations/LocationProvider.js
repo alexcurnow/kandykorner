@@ -19,8 +19,12 @@ export const LocationProvider = (props) => {
       body: JSON.stringify(location),
     }).then(getLocations)
 
-  useEffect(() => getLocations(), [])
-  useEffect(() => console.log('LOCATION APP STATE CHANGED'), [locations])
+  useEffect(() => {
+    getLocations()
+  }, [])
+  useEffect(() => {
+    console.log('LOCATION APP STATE CHANGED')
+  }, [locations])
 
   return (
     <LocationContext.Provider value={{ locations, addLocation }}>

@@ -7,7 +7,15 @@ import { ProductTypeProvider } from './products/ProductTypeProvider'
 
 export default () => (
   <>
-    <h2>🍭 Welcome to Kandy Korner 🍭</h2>
+    <h2>
+      <span role="img" aria-label="lollipop">
+        🍭
+      </span>{' '}
+      Welcome to Kandy Korner{' '}
+      <span role="img" aria-label="lollipop">
+        🍭
+      </span>
+    </h2>
 
     <h2>Locations</h2>
     <LocationProvider>

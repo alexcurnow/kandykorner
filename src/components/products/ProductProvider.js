@@ -19,8 +19,12 @@ export const ProductProvider = (props) => {
       body: JSON.stringify(product),
     }).then(getProducts)
 
-  useEffect(() => getProducts(), [])
-  useEffect(() => console.log('PRODUCT APP STATE CHANGED'), [products])
+  useEffect(() => {
+    getProducts()
+  }, [])
+  useEffect(() => {
+    console.log('PRODUCT APP STATE CHANGED')
+  }, [products])
 
   return (
     <ProductContext.Provider value={{ products, addProduct }}>

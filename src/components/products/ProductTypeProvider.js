@@ -19,8 +19,12 @@ export const ProductTypeProvider = (props) => {
       body: JSON.stringify(productType),
     }).then(getProductTypes)
 
-  useEffect(() => getProductTypes(), [])
-  useEffect(() => console.log('PRODUCT APP STATE CHANGED'), [productTypes])
+  useEffect(() => {
+    getProductTypes()
+  }, [])
+  useEffect(() => {
+    console.log('PRODUCT APP STATE CHANGED')
+  }, [productTypes])
 
   return (
     <ProductTypeContext.Provider value={{ productTypes, addProductType }}>
